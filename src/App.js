@@ -1,16 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import Crossword from './components/Crossword';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>This is my app</p>
-      </header>
+      <h1>💖 Valentine's crossword 💖</h1>
+      <Crossword />
     </div>
   );
 }

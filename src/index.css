@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.row {
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.row > div {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.cell {
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.cell > div {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.highlighted {
+  background-color: yellow;
+}
+
+.playable {
+  border: 1px solid;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.grid {
+  display: inline-block;
+}
