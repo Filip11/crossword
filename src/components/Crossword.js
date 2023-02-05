@@ -3,7 +3,7 @@ import useCrossword from '../hooks/useCrossword';
 import Grid from './Grid';
 
 export default function Crossword() {
-  const { handleKeyUp, letter, theGuesses, targetCell } = useCrossword()
+  const { handleKeyUp, letter, theGuesses, targetCell, targetCellY, setTargetCell, setTargetCellY } = useCrossword()
 
   useEffect(() => {
     window.addEventListener('keyup', handleKeyUp)
@@ -13,7 +13,7 @@ export default function Crossword() {
   return(
     <div>
       <div>Crossword</div>
-      <Grid letter={letter} theGuesses={theGuesses} targetCell={targetCell}/>
+      <Grid letter={letter} theGuesses={theGuesses} targetCell={targetCell} targetCellY={targetCellY} setTargetCell={setTargetCell} setTargetCellY={setTargetCellY}/>
     </div>
   )
 }
