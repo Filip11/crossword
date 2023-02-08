@@ -8,19 +8,23 @@ const useCrossword = () => {
       "02": undefined,
     }
   )
-  const solution = {0: "a", 1: "b", 2: "c"}
+  const solution = {
+    "00": "h", "10": "e", "20": "r",
+    "01": "h", "11": "e", "21": "r",
+    "02": "h",
+  }
   const [targetCell, setTargetCell] = useState(0)
   const [targetCellY, setTargetCellY] = useState(0)
-  const [direction, setDirection] = useState("X")
+  const [direction, setDirection] = useState(true)
+  const [victoryModal, setVictoryModal] = useState(false)
 
   const handleKeyUp = ({ key } ) => {
-    console.log(key)
-
     if (/^[A-Za-z]$/.test(key)) {
       setLetter(key)
       setTheGuesses({...theGuesses, [targetCell.toString()+targetCellY.toString()]: key})
       setTargetCell(targetCell + xModifier())
-      setTargetCellY(targetCellY + yModifier())
+      setTargetCellY(targetCellY + yModifier()) // Set a Max limit
+      console.log((targetCell).toString() + (targetCellY).toString())
     }
 
     if (key === 'Backspace') {
@@ -31,7 +35,7 @@ const useCrossword = () => {
   }
 
   const xModifier = () => {
-    if (direction === "X"){
+    if (direction === true){
       return 1;
     } else {
       return 0;
@@ -39,13 +43,13 @@ const useCrossword = () => {
   }
 
   const yModifier = () => {
-    if (direction === "Y"){
+    if (direction === false){
       return 1;
     } else {
       return 0;
     }
   }
 
-  return {letter, handleKeyUp, theGuesses, targetCell, targetCellY, setTargetCell, setTargetCellY}
+  return {letter, handleKeyUp, theGuesses, targetCell, targetCellY, setTargetCell, setTargetCellY, direction, setDirection, victoryModal, setVictoryModal, solution}
 }
 export default useCrossword

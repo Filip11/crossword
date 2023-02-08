@@ -20,14 +20,14 @@ code {
 
 .row > div {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .emptyCell {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .cell {
@@ -39,17 +39,21 @@ code {
 
 .cell > div {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border: 1px solid;
   text-align: center;
   text-transform: capitalize;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 2.0em;
 }
 
 .highlighted {
   background-color: yellow;
+}
+
+.highlightWord {
+  background-color: lightblue;
 }
 
 .playable {
