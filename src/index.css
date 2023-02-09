@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.column {
+  flex: 50%;
+}
+
+.gameRow {
+  display: flex;
+}
+
 .row {
   text-align: center;
   display: flex;
@@ -28,6 +36,9 @@ code {
   display: block;
   width: 40px;
   height: 40px;
+  background-color: pink;
+  outline: 1px solid;
+  outline-color: red;
 }
 
 .cell {
@@ -41,7 +52,7 @@ code {
   display: block;
   width: 40px;
   height: 40px;
-  border: 1px solid;
+  outline: 1px solid;
   text-align: center;
   text-transform: capitalize;
   font-weight: bold;
