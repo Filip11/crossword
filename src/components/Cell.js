@@ -43,8 +43,10 @@ export default function Cell({letter, selected, x, y,  setTargetCell, setTargetC
   }
   
   return(
-    <div className={highlightWord() ? "cell highlightWord" : "cell"}>
-      <div className={selected ? "highlighted": ""} onClick={clickHandler}>{letter}</div>
+    <div style={{display: 'flex'}}>
+      <div className={highlightWord() ? "cell highlightWord" : "cell"}>
+        <div className={selected ? "highlighted": ""} onClick={clickHandler}>{letter}</div>
+      </div>
     </div>
   )
 }

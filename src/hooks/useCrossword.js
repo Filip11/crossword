@@ -43,7 +43,7 @@ const useCrossword = () => {
     "1616": "n",
     "1617": "d",
   }
-  const [targetCell, setTargetCell] = useState(0)
+  const [targetCell, setTargetCell] = useState(12)
   const [targetCellY, setTargetCellY] = useState(0)
   const [direction, setDirection] = useState(false)
   const [victoryModal, setVictoryModal] = useState(false)
@@ -54,12 +54,9 @@ const useCrossword = () => {
       setLetter(key)
       if((targetCell.toString()+targetCellY.toString() in solution)){
         setTheGuesses({...theGuesses, [targetCell.toString()+targetCellY.toString()]: key})
-      } else {
-        console.log("pussy")
       }
       setTargetCell(targetCell + xModifier())
       setTargetCellY(targetCellY + yModifier()) // Set a Max limit
-      console.log((targetCell).toString() + (targetCellY).toString())
     }
 
     if (key === 'Backspace') {

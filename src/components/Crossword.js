@@ -13,10 +13,6 @@ export default function Crossword() {
   }, [handleKeyUp, theGuesses])
 
   useEffect(() => {
-    console.log("guess")
-    console.log(theGuesses)
-    console.log("sol")
-    console.log(solution)
     if (JSON.stringify(theGuesses) === JSON.stringify(solution)){
       setVictoryModal(true)
     }
@@ -29,7 +25,7 @@ export default function Crossword() {
         <Grid letter={letter} theGuesses={theGuesses} targetCell={targetCell} targetCellY={targetCellY} setTargetCell={setTargetCell} setTargetCellY={setTargetCellY} direction={direction} setDirection={setDirection} selectedWord={selectedWord} setSelectedWord={setSelectedWord}/>
       </div>
       <div className='column'>
-        <Clues />
+        <Clues selectedWord={selectedWord} setSelectedWord={setSelectedWord} setTargetCell={setTargetCell} setTargetCellY={setTargetCellY}/>
       </div>
     </div>
   )
