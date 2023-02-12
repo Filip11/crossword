@@ -1,5 +1,4 @@
 import React from 'react';
-import Row from './Row';
 import Cell from './Cell';
 
 export default function Grid({theGuesses, targetCell, targetCellY, setTargetCell, setTargetCellY, direction, setDirection, selectedWord, setSelectedWord}) {

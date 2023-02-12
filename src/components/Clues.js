@@ -1,14 +1,6 @@
 import React from 'react';
 
 export default function Clues({selectedWord, setSelectedWord, setTargetCell, setTargetCellY}){
-
-  const handling = (newWord, newX, newY) => {
-    console.log("click")
-    // setSelectedWord(newWord)
-    // setTargetCell(newX)
-    // setTargetCellY(newY)
-  }
-
   return(
     <div>
       <h2 style={{fontFamily: 'Apple Chancery'}}>Clues</h2>
