@@ -11,10 +11,10 @@ export default function Clues({selectedWord, setSelectedWord, setTargetCell, set
 
   return(
     <div>
-      <h2>Clues</h2>
+      <h2 style={{fontFamily: 'Apple Chancery'}}>Clues</h2>
       <div className='gameRow'>
         <div className='column'>
-          <h3>Across</h3>
+          <h2 style={{fontFamily: 'Apple Chancery'}}>Across</h2>
           <div>
             <div style={{display: "flex"}} className={5 === selectedWord ? "highlightWord" : ""}>
               <p><b>5 </b> Our first date night</p>
@@ -43,7 +43,7 @@ export default function Clues({selectedWord, setSelectedWord, setTargetCell, set
           </div>
         </div>
         <div className='column'>
-          <h4>Down</h4>
+          <h2 style={{fontFamily: 'Apple Chancery'}}>Down</h2>
           <div style={{display: "flex"}} className={1 === selectedWord ? "highlightWord" : ""}>
             <p><b>1 </b> Home of the best slice of meringue</p>
           </div>
